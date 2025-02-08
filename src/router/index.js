@@ -5,6 +5,7 @@ import Curso from '../../plugin/components/plantilla/Curso.vue'
 import Glosario from '../../plugin/components/Glosario.vue'
 import Referencias from '../../plugin/components/Referencias.vue'
 import Creditos from '../../plugin/components/Creditos.vue'
+import Complementario from '../../plugin/components/Complementario.vue'
 
 Vue.use(VueRouter)
 
@@ -75,8 +76,7 @@ const router = new VueRouter({
     {
       path: '/complementario',
       name: 'complementario',
-      component: () =>
-        import(/* webpackChunkName: "comple" */ '../views/Complementario.vue'),
+      component: Complementario,
     },
     {
       path: '/referencias',
