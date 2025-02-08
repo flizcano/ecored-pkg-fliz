@@ -10,7 +10,7 @@
       hr.my-3
 </template>
 <script>
-import plantillaMixins from '../mixins/plantillaMixins'
+import plantillaMixins from './plantillaMixins'
 export default {
   name: 'Referencias',
   mixins: [plantillaMixins],

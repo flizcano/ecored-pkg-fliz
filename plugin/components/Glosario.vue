@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import plantillaMixins from '../mixins/plantillaMixins'
+import plantillaMixins from './plantillaMixins'
 export default {
   name: 'Glosario',
   mixins: [plantillaMixins],

@@ -34,7 +34,7 @@
   
 </template>
 <script>
-import plantillaMixins from '../mixins/plantillaMixins'
+import plantillaMixins from './plantillaMixins'
 export default {
   name: 'Creditos',
   mixins: [plantillaMixins],
