@@ -1,6 +1,6 @@
 {
   "name": "ecored-pkg-fliz",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "AGPL-3.0",
   "main": "./plugin/plugin.js",
   "description": "Paquete para el desarrollo de componentes de recursos educativos digitales",
