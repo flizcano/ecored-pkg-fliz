@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Inicio from '../../plugin/components/Inicio.vue'
-import Curso from '../views/Curso.vue'
+import Curso from '../../plugin/components/Curso.vue'
+import Glosario from '../../plugin/components/Glosario.vue'
+import Referencias from '../../plugin/components/Referencias.vue'
+import Creditos from '../../plugin/components/Creditos.vue'
 
 Vue.use(VueRouter)
 
@@ -67,8 +70,7 @@ const router = new VueRouter({
     {
       path: '/glosario',
       name: 'glosario',
-      component: () =>
-        import(/* webpackChunkName: "glosario" */ '../views/Glosario.vue'),
+      component: Glosario,
     },
     {
       path: '/complementario',
@@ -79,10 +81,7 @@ const router = new VueRouter({
     {
       path: '/referencias',
       name: 'referencias',
-      component: () =>
-        import(
-          /* webpackChunkName: "referencias" */ '../views/Referencias.vue'
-        ),
+      component: Referencias,
     },
     {
       path: '/sintesis',
@@ -93,8 +92,7 @@ const router = new VueRouter({
     {
       path: '/creditos',
       name: 'creditos',
-      component: () =>
-        import(/* webpackChunkName: "creditos" */ '../views/Creditos.vue'),
+      component: Creditos,
     },
   ],
   scrollBehavior(to, from) {
