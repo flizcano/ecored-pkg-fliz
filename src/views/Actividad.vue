@@ -9,7 +9,7 @@
   </template>
 
 <script>
-import Actividad from '@/components/actividad/Actividad.vue'
+import Actividad from '../../plugin/components/actividad/Actividad.vue'
 export default {
   name: 'ActividadDidactica',
   components: {
