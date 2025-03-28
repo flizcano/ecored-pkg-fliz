@@ -31,6 +31,8 @@
         :respuestas="respuestas"
         :mensaje-aprobado="cuestionario.mensaje_final_aprobado"
         :mensaje-reprobado="cuestionario.mensaje_final_reprobado"
+        :titulo-aprobado="cuestionario.titulo_aprobado"
+        :titulo-reprobado="cuestionario.titulo_reprobado"
         :porcentaje-aprobadas="porcentajeAprobadas"
         :preguntas-count="preguntas.length"
         :total-preguntas-base="cuestionario.preguntas.length"

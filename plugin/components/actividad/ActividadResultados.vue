@@ -51,13 +51,13 @@
         </div>
 
         <template v-if="aprobado">
-          <h3>¡BUEN TRABAJO!</h3>
+          <h3>{{ tituloAprobado }}</h3>
           <p class="mb-0 text-center">
             {{ mensajeAprobado }}
           </p>
         </template>
         <template v-else>
-          <h3>VUELVE A INTENTARLO</h3>
+          <h3>{{ tituloReprobado }}</h3>
           <p class="mb-0 text-center">
             {{ mensajeReprobado }}
           </p>
@@ -92,6 +92,14 @@ export default {
       type: String,
       default:
         'Le recomendamos volver a revisar el componente formativo e intentar nuevamente la actividad didáctica.',
+    },
+    tituloAprobado: {
+      type: String,
+      default: '¡BUEN TRABAJO!',
+    },
+    tituloReprobado: {
+      type: String,
+      default: 'VUELVE A INTENTARLO',
     },
     porcentajeAprobadas: {
       type: Number,
