@@ -543,6 +543,28 @@
             p.text-center 
               b Ruta integral de atención en salud 
             p.text-center Acciones realizadas en los entornos donde transcurre la vida y se desarrollan las personas  
+
+      Separador
+
+      #actividad-dialogo.titulo-segundo.color-acento-botones
+        h2 Actividad dialogo Ingles
+
+      DialogoActividad.color-primario.mb-5(:dialogo="dialogoActividad")
+        template(#nombre-actividad) Arrastrar y Soltar
+        template(#titulo-actividad) Titulo de actividad - Completa la conversación.
+        template(#descripcion-actividad) Arrastra y suelta el cada una de las palabras en el orden correcto.
+        //- template(#feedback-correcto) Bien!
+        //- template(#feedback-incorrecto) Mal!
+        
+      Separador
+      #actividad-dialogo.titulo-segundo.color-acento-botones
+        h2 Complementos dialogo Ingles
+
+      DialogoBurbuja.color-primario.borde.mb-3(:dialogoItem="dialogoItem")
+
+      Dialogo.mb-5.color-secundario.borde(:dialogo="dialogo")  
+
+      Separador
   </template>
 
 <script>
@@ -550,6 +572,109 @@ export default {
   name: 'Tema1',
   data: () => ({
     mostrarIndicadorTarjetaAudio: true,
+        dialogoItem: {
+      personaje: {
+        nombre: 'Jhon',
+        img: require('@/assets/componentes/ej-05.svg'),
+      },
+      textoIng: 'She is forgetting the keys.',
+      textoEsp: 'Ella está olvidando las llaves.',
+      audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+    },
+    dialogo: {
+      personajes: [
+        {
+          nombre: 'Hanna',
+          img: require('@/assets/componentes/ej-05.svg'),
+        },
+        {
+          nombre: 'Jhon',
+          img: require('@/assets/componentes/ej-05.svg'),
+        },
+      ],
+      dialogo: [
+        {
+          personaje: 'Hanna',
+          textoIng: 'I need the biology book and the sheets.',
+          textoEsp: 'Yo necesito el libro de biologia y las diapositivas.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+        },
+        {
+          personaje: 'Jhon',
+          textoIng: 'I need the book and the sheets',
+          textoEsp: 'Yo necesito el libro de y las diapositivas',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+        },
+        {
+          personaje: 'Hanna',
+          textoIng: 'I need the biology books and the.',
+          textoEsp: 'Yo necesito el libro de biologia y las.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+        },
+        {
+          personaje: 'Jhon',
+          textoIng: 'I the biology books and the sheets',
+          textoEsp: 'Yo el libro de biologia y las diapositivas.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+        },
+        {
+          personaje: 'Hanna',
+          textoIng: 'I need the biology books and the.',
+          textoEsp: 'Yo necesito el libro de biologia y las.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+        },
+      ],
+    },
+    dialogoActividad: {
+      personajes: [
+        {
+          nombre: 'Hanna',
+          img: require('@/assets/componentes/ej-05.svg'),
+        },
+        {
+          nombre: 'Jhon',
+          img: require('@/assets/componentes/ej-05.svg'),
+        },
+      ],
+      dialogo: [
+        {
+          personaje: 'Hanna',
+          textoIng: 'I need the biology book and the sheets.',
+          textoEsp: 'Yo necesito el libro de biologia y las diapositivas.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+        },
+        {
+          personaje: 'Jhon',
+          textoIng:
+            'I need the *** book and the sheets book and the sheets book and the sheets book and the sheets.',
+          textoEsp:
+            'Yo necesito el libro de *** y las diapositivas Yo necesito el libro de Yo necesito el libro de Yo necesito el libro de .',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+          palabra: 'Biology1',
+        },
+        {
+          personaje: 'Hanna',
+          textoIng: 'I need the biology books and the ***.',
+          textoEsp: 'Yo necesito el libro de biologia y las ***.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+          palabra: 'sheets2',
+        },
+        {
+          personaje: 'Jhon',
+          textoIng: 'I *** the biology books and the sheets',
+          textoEsp: 'Yo *** el libro de biologia y las diapositivas.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+          palabra: 'need3',
+        },
+        {
+          personaje: 'Hanna',
+          textoIng: 'I need the biology books and the ***.',
+          textoEsp: 'Yo necesito el libro de biologia y las ***.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+          palabra: 'sheets4',
+        },
+      ],
+    },
   }),
 }
 </script>
