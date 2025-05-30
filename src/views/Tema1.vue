@@ -572,7 +572,7 @@ export default {
   name: 'Tema1',
   data: () => ({
     mostrarIndicadorTarjetaAudio: true,
-        dialogoItem: {
+    dialogoItem: {
       personaje: {
         nombre: 'Jhon',
         img: require('@/assets/componentes/ej-05.svg'),
