@@ -1,7 +1,7 @@
 <template lang="pug">
 .slyder-f
   
-  .slyder-f__btn.pe-3(@click="clickAnterior")
+  .slyder-f__btn.pe-3(v-if="puedeRetroceder" @click="clickAnterior")
     i.fas.fa-chevron-left
   .slyder-f__main(:id="'slyder-f-' + mainId")
     ScrollHorizontal(
@@ -35,6 +35,13 @@ export default {
     columnas: {
       type: String,
       default: '',
+    },
+  },
+  computed: {
+    puedeRetroceder() {
+      if (!this.elements.length) return false
+      const ids = this.elements.map(e => e.id)
+      return this.selected !== ids[0]
     },
   },
   methods: {
